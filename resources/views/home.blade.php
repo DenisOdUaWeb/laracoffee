@@ -10,11 +10,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
         
 
-        <!-- Styles -->
+        <!-- Styles  /../-->
         <link rel="stylesheet" href="css/fonts.css">
-        <link rel="stylesheet" href="./css/app.css">
+        <link rel="stylesheet" href="resources/css/app.css">
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     
     </head>
