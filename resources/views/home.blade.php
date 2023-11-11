@@ -12,7 +12,7 @@
 
         <!-- Styles  /../-->
         <link rel="stylesheet" href="css/fonts.css">
-        <link rel="stylesheet" href="resources/css/app.css">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
