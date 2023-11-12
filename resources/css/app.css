@@ -1,6 +1,7 @@
 
 :root {
     --owl-element-max-size: 950px;
+    --max-screen-size: 1920px;
   }
 
 body{
