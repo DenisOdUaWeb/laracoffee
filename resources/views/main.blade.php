@@ -37,17 +37,23 @@
             @endif
 
             <main id="main_wrapper" class="wrapper">
+            <form action="{{ url('/action.php') }}" method="POST">
                 <header class="header">
                     <div class="container">
                         <div class="header__top">
+                            <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
+                <input type="text" value="Welcome to Early Birds. We ship every Tuesday
+                            and Thursday. Free shipping above
+                            €25 in The Netherlands.">
                             <h5>Welcome to Early Birds. We ship every Tuesday
                             and Thursday. Free shipping above
                             €25 in The Netherlands.</h5>
+                             
                         </div>
                         <div class="header__main">
                             <nav class="nav-header left-nav">
                                 <ul class="nav-header__ul" id="nav_sliding_ul">
-                                    <li class="nav-header__item"><a class="nav-header__link" href="#"><span>Home</span></a>
+                                    <li class="nav-header__item"><a class="nav-header__link" href="#">Home</a>
                                         <img src="storage/img/svg.qodef-svg--underline.png" alt="underline">
                                     </li>
                                     <li class="nav-header__item"><a class="nav-header__link" href="#">Reserve</a>
@@ -117,7 +123,12 @@
                         </div>
                     </div>
                 </section>
-                
+                <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
+                <input type="text" value="Welcome to Early Birds. We ship every Tuesday
+                            and Thursday. Free shipping above
+                            €25 in The Netherlands.">
+
+
                 <section class="our-blends">
                     <div class="our-blends__container container">
                         <div class="our-blends__info">
@@ -230,7 +241,10 @@
                         </div>    
                     </div>
                 </section>
-
+<!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
+<input type="text" value="Welcome to Early Birds. We ship every Tuesday
+                            and Thursday. Free shipping above
+                            €25 in The Netherlands.">
                 <section class="contact-us">
                     <div class="container">
                         <div class="contact-us__row">
@@ -830,6 +844,22 @@
                     </div>
                 </section>
 
+                <section class="map">
+                    <div class="container">
+                        <div class="map__frame">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2079.7238979902613!2d1.5383474956499115!3d42.509115643868476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssa!4v1699957724072!5m2!1sen!2ssa" 
+                                width="320" 
+                                height="420" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                </section>
+
                 <footer class="footer">
                     <div class="container">
                         <div class="footer__row">
@@ -868,9 +898,16 @@
                         </div>
                     </div>
                 </footer>
-
+                <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
+                
+                <input name="fname" type="text" value="Welcome to Early Birds. We ship every Tuesday
+                            and Thursday. Free shipping above
+                            €25 in The Netherlands.">
+                            <button type="submit">SUBMIT</button>
+            </form>
             </main>
         </div>
+
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

@@ -6,7 +6,7 @@
 @import 'variables';
 
 // Bootstrap
-//@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
 @import 'fonts.css';
 @import 'reset';
@@ -769,6 +769,10 @@ body {
 		
         background: center / cover no-repeat url('/storage/app/public/img/emphasized.png');
 	}
+}
+.map__frame{
+	display:flex;
+	justify-content: center;
 }
 .footer__row {
 	border-top: 1px solid $color_4;

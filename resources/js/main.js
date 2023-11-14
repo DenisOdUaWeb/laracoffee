@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-     //OWL CAROUSEL 
+     //OWL CAROUSEL
+     
      const leftArrow = '<img src="storage/img/left-arrow.jpg">';
      const rightArrow = '<img src="storage/img/right-arrow.jpg">';
     $('#header_owl_carousel').owlCarousel({
@@ -97,10 +98,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
     //const buttons = document.querySelectorAll("button");
     //console.log(buttons);
-    allTexts.forEach(function(text){
-        text.setAttribute("contenteditable", "true");
-        text.setAttribute("style", "min-width:5px;");
-        //text.innerHTML = "Change me";
+    allTexts.forEach(function(textTag){
+        textTag.setAttribute("contenteditable", "false");
+        textTag.setAttribute("style", "min-width:5px;");
+        let content = textTag.innerHTML;
+        let newEl = document.createElement('input');
+        newEl.value = content; newEl.type='text'; newEl.style.border = '1px solid red';
+        newEl.size = content.length;
+        textTag.replaceWith(newEl);
     });
     console.log(mainDoc);
     //button.setAttribute("name", "helloButton");
