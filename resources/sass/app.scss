@@ -12,16 +12,15 @@
 @import 'reset';
 
 $color_2: #fff;
-$color_3: white;
 $color_4: #000;
 $color_5: #FBED81;
+
 $font-family_1: 'Anton', sans-serif;
 $font-family_2: 'Space Mono', monospace;
-$font-family_3: 'Space mono', monospace;
 $font-family_4: 'Mansalva';
+
 $background-color_1: #000;
 $background-color_2: #fff;
-$background-color_3: white;
 $background-color_4: #FDF1D9;
 $background-color_5: black;
 $background-color_6: rgb(248 248 248);
@@ -99,7 +98,7 @@ body {
 	font-size: 14px;
 	height: 40px;
 	background-color: $background-color_1;
-	color: $color_3;
+	color: $color_2;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -213,11 +212,11 @@ body {
 	line-height: 1.2;
 }
 .ellipsed {
+	white-space: nowrap;
 	padding: 0 25px;
 	line-height: 1.3;
 	word-break: keep-all;
     background: center / contain no-repeat url("../../storage/app/public/img/our_blends/ellipse.png");
-
 }
 .our-blends__infotext {
 	font-family: $font-family_2;
@@ -332,7 +331,7 @@ body {
 	background-color: $background-color_5 !important;
 }
 .owl-dot.active {
-	background-color: $background-color_3 !important;
+	background-color: $background-color_2 !important;
 }
 .contact-us__row {
 	display: flex;
@@ -463,7 +462,7 @@ body {
 	justify-content: space-evenly;
 	max-width: 1300px;
 	margin: 20px auto 0 auto;
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 18px;
 	flex-wrap: wrap;
 }
@@ -483,7 +482,7 @@ body {
 .reserve__powered {
 	max-width: 1305px;
 	margin: 20px auto 135px auto;
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 12px;
 }
 .our-team__title {
@@ -518,7 +517,7 @@ body {
 	margin-top: 15px;
 }
 .our-team-member__job-title {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 18px;
 	line-height: calc(24 / 18) * 100%;
 	letter-spacing: 0%;
@@ -570,7 +569,7 @@ body {
 	padding: 18px 0;
 }
 .posts-card__date-author {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 18px;
 	margin-bottom: 20px;
 }
@@ -630,7 +629,7 @@ body {
 	margin: 0 0 11px 0;
 }
 .barista-schools__text {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1900 - 320)));
 	margin: 0 0 50px 0;
 }
@@ -701,12 +700,12 @@ body {
 	}
 }
 .coffee-menu-list__price {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 18px;
 	line-height: 24px;
 }
 .coffee-menu-list__description {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 18px;
 	line-height: 24px;
 }
@@ -740,7 +739,7 @@ body {
 	padding: 50px;
 }
 .follow-us__cards-wripper {
-	padding: 50px;
+	padding: 42px;
 }
 .cards-box {
 	display: flex;
@@ -799,27 +798,27 @@ body {
 	font-size: 30px;
 }
 .footer__info-address {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 18px;
 	line-height: 28px;
 }
 .footer__info-tel {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 18px;
 	line-height: 28px;
 }
 .footer__info-city {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 18px;
 	line-height: 28px;
 }
 .footer__social {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 16px;
 	line-height: 28px;
 }
 .footer__nav-item {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 16px;
 	line-height: 28px;
 }
@@ -850,7 +849,7 @@ body {
 	.show-me {
 		left: -5px !important;
 		border: 1px solid #000;
-		background-color: $background-color_3;
+		background-color: $background-color_2;
 		z-index: 10;
 	}
 	.search-png {

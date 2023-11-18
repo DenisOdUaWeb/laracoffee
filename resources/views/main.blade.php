@@ -36,18 +36,17 @@
                 </div>
             @endif
 
-            <main id="main_wrapper" class="wrapper">
-            <form action="{{ url('/action.php') }}" method="POST">
+            
+            <form action="{{ url('/action') }}" method="POST">  <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
+            @csrf
                 <header class="header">
                     <div class="container">
                         <div class="header__top">
                             <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
-                <input type="text" value="Welcome to Early Birds. We ship every Tuesday
+                            <!-- <input type="text" value="Welcome to Early Birds. We ship every Tuesday
                             and Thursday. Free shipping above
-                            €25 in The Netherlands.">
-                            <h5>Welcome to Early Birds. We ship every Tuesday
-                            and Thursday. Free shipping above
-                            €25 in The Netherlands.</h5>
+                            €25 in The Netherlands."> -->
+                            <h5>Welcome to Early Birds. We ship every Tuesday and Thursday. Free shipping above €25 in The Netherlands.</h5>
                              
                         </div>
                         <div class="header__main">
@@ -72,7 +71,7 @@
                                         <img src="storage/img/svg.qodef-svg--underline.png" alt="underline">
                                     </li>
                                 </ul>
-                                    <button id="bmenubtn"><img width ="44px" height="40px" src="storage/img/burgermenu.png" alt="bmenu_btn"></button>
+                                    <button type="button" id="bmenubtn"><img width ="44px" height="40px" src="storage/img/burgermenu.png" alt="bmenu_btn"></button>
                             </nav>
                             <div class="middle-img">
                                 <img src="storage/img/logo-black-1.png.png" alt="logo">
@@ -112,61 +111,66 @@
                             </div>
                         </div>
                     </div>
+                    <section class="small-section">
+                        <div class="container">
+                            <div class="small-section__block">
+                                <div>Fairtraide</div>
+                                <div>Organic</div>
+                                <div>Climate neutral</div>
+                            </div>
+                        </div>
+                    </section>
                 </header>
 
-                <section class="small-section">
-                    <div class="container">
-                        <div class="small-section__block">
-                            <div>Fairtraide</div>
-                            <div>Organic</div>
-                            <div>Climate neutral</div>
-                        </div>
-                    </div>
-                </section>
+                <br><hr> sad <hr> <i> sdfsdfsdf </i>
+                <em> asd </em> <br>  
                 <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
                 <input type="text" value="Welcome to Early Birds. We ship every Tuesday
                             and Thursday. Free shipping above
                             €25 in The Netherlands.">
 
-
+            <main id="main_wrapper" class="wrapper">    
                 <section class="our-blends">
-                    <div class="our-blends__container container">
-                        <div class="our-blends__info">
-                            <div class="our-blends__infotitle">
-                                Our blends deliver on the promise of balance and consistency, <span class="ellipsed">roasted&nbspto</span><br>maximize sweetness.
-                            </div>
-                            <div class="our-blends__infotext">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.
-                            </div>
-                            <div class="our-blends__infomore _infomore">
-                                <button class="our-blends__infobtn _infomore__btn">View More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
-                            </div>
-                        </div>
-                        <div class="our-blends__cards product-cards">
-                            <div class="product-cards__item">
-                                <div class="product-cards__img">
-                                    <img src="storage/img/our_blends/product-1.png">
+                    <div class="container">
+                        <div class="our-blends__container">
+                            <div class="our-blends__info">
+                                <div class="our-blends__infotitle">
+                                    Our blends deliver on the promise of balance and consistency, <span class="ellipsed">roasted to</span><br>maximize sweetness.
                                 </div>
-                                <div class="product-cards__title">
-                                    Arabica Bekele
+                                <div class="our-blends__infotext">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.
                                 </div>
-                                <div class="product-cards__price">
-                                    $44.00
+                                <div class="our-blends__infomore _infomore">
+                                    <button type="button" class="our-blends__infobtn _infomore__btn">View More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
                                 </div>
                             </div>
-                            <div class="product-cards__item">
-                                <div class="product-cards__img">
-                                    <img src="storage/img/our_blends/product-2.png">
+                            <div class="our-blends__cards product-cards">
+                                <div class="product-cards__item">
+                                    <div class="product-cards__img">
+                                        <img src="storage/img/our_blends/product-1.png">
+                                    </div>
+                                    <div class="product-cards__title">
+                                        Arabica Bekele
+                                    </div>
+                                    <div class="product-cards__price">
+                                        $44.00
+                                    </div>
                                 </div>
-                                <div class="product-cards__title">
-                                    Arabica Bekele
-                                </div>
-                                <div class="product-cards__price">
-                                    $44.00
+                                <div class="product-cards__item">
+                                    <div class="product-cards__img">
+                                        <img src="storage/img/our_blends/product-2.png">
+                                    </div>
+                                    <div class="product-cards__title">
+                                        Arabica Bekele
+                                    </div>
+                                    <div class="product-cards__price">
+                                        $44.00
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </section>
 
                 <section class="more-than">
@@ -269,19 +273,19 @@
                             <div class="contact-us__coll">
                                 <div class="contact-us__contacts">
                                     <div class="contact-us__title">
-                                        Amsterdam Centre Coffee
+                                        <h3>Amsterdam Centre Coffee</h3>
                                     </div>
                                     <div class="contact-us__text">
-                                        Weteringstraat 48,1017,Amsterdam<br>
-                                        <br>
-                                        <p>Tel: 020-7718364<br>
-                                        Email: earlybirds@info.com</p> 
-                                        <br>
-                                        <p> <span class="contact-us__time">Mon-Fri</span><span class="contact-us__dots">.........</span><span class="contact-us__time">6.45am-3.00pm</span><br> 
-                                            <span class="contact-us__time">Sat-Sun</span><span class="contact-us__dots">.........</span><span class="contact-us__time">8.30am-4.00pm</span></p>
+                                        <p>Weteringstraat 48,1017, Amsterdam</p>
+                                        
+                                        <p>Tel: 020-7718364</p>
+                                        <p>Email: earlybirds@info.com</p> 
+                                        
+                                        <p> <span class="contact-us__time">Mon-Fri</span><span class="contact-us__dots">.........</span><span class="contact-us__time">6.45am-3.00pm</span></p> 
+                                        <p> <span class="contact-us__time">Sat-Sun</span><span class="contact-us__dots">.........</span><span class="contact-us__time">8.30am-4.00pm</span></p>
                                     </div>
                                     <div class="contact-us__btn black-btn">
-                                        <button class="black-btn__btn">Contact us</button>
+                                        <button type="button" class="black-btn__btn">Contact us</button>
                                     </div>
                                 </div>
                                 
@@ -352,7 +356,7 @@
                         <div class="food__wrapper-row">
                             <div class="food__left-coll">
                                 <div class="food__title _big-title">
-                                    swing&nbspby our&nbspplace<br>we also <span class="_relative"><span class="ellipsed _absolute">have&nbspfood.</span></span>  
+                                    <h3>swing&nbspby our&nbspplace <br>we also <span class="_relative"><span class="ellipsed _absolute">have food.</span></span> </h3> 
                                 </div>
                                 <div class="food__img">
                                     <img src="storage/img/food/food_img.png">
@@ -369,7 +373,7 @@
                                         </div>
                                     </div>
                                     <div class="food__right-coll-item-more _infomore">
-                                        <button class="our-blends__infobtn _infomore__btn">View More</button>
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">View More</button>
                                         <img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
@@ -383,7 +387,7 @@
                                         </div>
                                     </div>
                                     <div class="food__right-coll-item-more _infomore">
-                                        <button class="our-blends__infobtn _infomore__btn">View More</button>
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">View More</button>
                                         <img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
@@ -397,7 +401,7 @@
                                         </div>
                                     </div>    
                                     <div class="food__right-coll-item-more _infomore">
-                                        <button class="our-blends__infobtn _infomore__btn">View More</button>
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">View More</button>
                                         <img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
@@ -411,7 +415,7 @@
                                         </div>
                                     </div>
                                     <div class="food__right-coll-item-more _infomore">
-                                        <button class="our-blends__infobtn _infomore__btn">View More</button>
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">View More</button>
                                         <img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
@@ -437,7 +441,7 @@
                                     11:00
                                 </div>
                                 <div class="reserve__item reserve__item_btn black-btn">
-                                    <button class="black-btn__btn">Book a Table</button>
+                                    <button type="button" class="black-btn__btn">Book a Table</button>
                                 </div>
                             </div>
                             <div class="reserve__powered">
@@ -533,7 +537,7 @@
                                     Recent blog posts Explore <span class="ellipsed">now</span>
                                 </div>
                                 <div class="recent-posts__all_btn black-btn">
-                                    <button class="black-btn__btn">read all news</button>
+                                    <button type="button" class="black-btn__btn">read all news</button>
                                 </div>
                             </div>
                             <div class="recent-posts__rightpart">
@@ -557,7 +561,7 @@
                                                 Make sure your coffee is as fresh as it can be.
                                             </div>
                                             <div class="posts-card__infomore _infomore">
-                                                <button class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                                <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
                                             </div>
                                         </div>
                                     </div>
@@ -580,7 +584,7 @@
                                                 The Best Coffee Advent Calendars of this year
                                             </div>
                                             <div class="posts-card__infomore _infomore">
-                                                <button class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                                <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
                                             </div>
                                         </div>
                                     </div>
@@ -603,7 +607,7 @@
                                                 The Most Common Way People Drink Noir Café
                                             </div>
                                             <div class="posts-card__infomore _infomore">
-                                                <button class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                                <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
                                             </div>
                                         </div>
                                     </div>
@@ -626,7 +630,7 @@
                                                 Coffee Beans Prepared In Four Different Ways
                                             </div>
                                             <div class="posts-card__infomore _infomore">
-                                                <button class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                                <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
                                             </div>
                                         </div>
                                     </div>
@@ -649,7 +653,7 @@
                                                 The Baristan Kettle is a Beacon for Preparation
                                             </div>
                                             <div class="posts-card__infomore _infomore">
-                                                <button class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                                <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
                                             </div>
                                         </div>
                                     </div>
@@ -672,7 +676,7 @@
                                                 The World’s Best Coffee Tours: Brasil, Columbi
                                             </div>
                                             <div class="posts-card__infomore _infomore">
-                                                <button class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                                <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
                                             </div>
                                         </div>
                                     </div> 
@@ -696,7 +700,7 @@
                                     We host courses covering everything from simple home brewing techniques to advanced latte art to allow you to learn the essential life skill of how to make truly great coffee.
                                 </div>
                                 <div class="barista-schools__btn black-btn">
-                                    <button class="black-btn__btn">View More</button>
+                                    <button type="button" class="black-btn__btn">View More</button>
                                 </div>
                             </div>
                         </div>
@@ -846,7 +850,7 @@
 
                 <section class="map">
                     <div class="container">
-                        <div class="map__frame">
+                        <div class="map__frame mb-5">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2079.7238979902613!2d1.5383474956499115!3d42.509115643868476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssa!4v1699957724072!5m2!1sen!2ssa" 
                                 width="320" 
                                 height="420" 
@@ -900,9 +904,7 @@
                 </footer>
                 <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
                 
-                <input name="fname" type="text" value="Welcome to Early Birds. We ship every Tuesday
-                            and Thursday. Free shipping above
-                            €25 in The Netherlands.">
+                <input name="fname" type="text" value="Welcome to Early Birds. We ship every Tuesday and Thursday. Free shipping above €25 in The Netherlands.">
                             <button type="submit">SUBMIT</button>
             </form>
             </main>

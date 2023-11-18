@@ -92,20 +92,53 @@ document.addEventListener("DOMContentLoaded", function () {
     var mainDoc = document.getElementById('main_wrapper');
     //wholeDoc.classList.add('asd');
     //console.log(wholeDoc);
-    var allTexts = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, address, a");
+    var allTexts = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, address");
     //console.log(wholeDivs);
     //wholeDivs.setAttribute("name", "asdasd");
     
     //const buttons = document.querySelectorAll("button");
     //console.log(buttons);
+
+    //var $;
+    //$ = document.querySelectorAll.bind(document);
+
+    var lookingFor = "div";
+    function getParentByTag(elem, lookingFor) {
+        lookingFor = lookingFor.toUpperCase();
+        while (elem = elem.parentNode) if (elem.tagName === lookingFor) return elem;
+      }
+
     allTexts.forEach(function(textTag){
         textTag.setAttribute("contenteditable", "false");
         textTag.setAttribute("style", "min-width:5px;");
         let content = textTag.innerHTML;
-        let newEl = document.createElement('input');
-        newEl.value = content; newEl.type='text'; newEl.style.border = '1px solid red';
-        newEl.size = content.length;
-        textTag.replaceWith(newEl);
+        console.log(content);
+        let newElm = document.createElement('input');
+        newElm.value = content;
+        newElm.type='text'; 
+        newElm.style.border = '1px solid red';
+        newElm.size = content.length || 5;
+        const d = new Date();
+        newElm.name = d.getTime();
+        //console.log(newElm.name);
+        //newElm.name = newElm.parentNode.classList; //  getTime()
+        textTag.replaceWith(newElm);
+        if (textTag.childNodes){
+                console.log("TC = ", textTag.textContent );
+        }else{
+            console.log("textTag.nodeList_____________________________________________________",textTag.childNodes);
+        }
+        if (textTag.textContent !== ''){
+            textTag.textContent = textTag.textContent + '2'; ////////////////////////////
+        }
+        //console.log("NEW EL is: ", typeof newElm);
+        //console.log(newElm.parentNode.className);
+
+        newElm.replaceWith(textTag);////////////////////////////
+        
+        console.log(getParentByTag(newElm, lookingFor));
+        //console.log($.length);
+
     });
     console.log(mainDoc);
     //button.setAttribute("name", "helloButton");
@@ -113,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-
+/////////////////////////////////////// tests remove after 
  document.addEventListener("DOMContentLoaded",function () {
         
         var myFunction = function(){
@@ -126,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.setTimeout(myFunction, 15000);
     });
 
-
+/////////////////////////////////////// tests remove after 
 const a = {
     x: 1,
     y: "2",
@@ -135,9 +168,9 @@ const a = {
     }
 }
 console.log(typeof a);
-console.log(typeof a.x);
-console.log(typeof a.y);
-console.log(typeof a.z);
-console.log(void " ");
+console.log("x=", typeof a.x);
+console.log("y=", typeof a.y);
+console.log("f z=", typeof a.z);
+console.log("void =",void " ");
 a.z();
  
