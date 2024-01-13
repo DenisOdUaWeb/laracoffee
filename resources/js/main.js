@@ -86,13 +86,37 @@ document.addEventListener("DOMContentLoaded", function () {
         }*/
     });
 
+    var mainDoc = document.getElementById('main_wrapper');
+
+    var ff = Array();
+    mainDoc = mainDoc.innerHTML;
+    //console.log(typeof mainDoc);
+    //mainDoc = mainDoc.toString(); // useless
+    //console.log(mainDoc);
+    var regex = /<[^>]+>/g;
+    var content = mainDoc.replaceAll(regex, '^');
+    console.log(content);
+    var arrteksts = content.split('^');
+    console.log(arrteksts);
+	//for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
+	//for ($j=0; $j< count($ff); $j++) { 
+		//echo('<a href="login.php?mode=3&j='.$j.'" class="mytext">'.$ff[$j].'</a>');
+	//};
+
+
+
+
+
+
     //phrase_carousel end 
      
     //TESTING
-    var mainDoc = document.getElementById('main_wrapper');
+
+    //var mainDoc = document.getElementById('main_wrapper');
+
     //wholeDoc.classList.add('asd');
     //console.log(wholeDoc);
-    var allTexts = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, address");
+    var allTexts = document.querySelectorAll("e, h1, h2, h3, h4, h5, h6, p, address");
     //console.log(wholeDivs);
     //wholeDivs.setAttribute("name", "asdasd");
     
@@ -107,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         lookingFor = lookingFor.toUpperCase();
         while (elem = elem.parentNode) if (elem.tagName === lookingFor) return elem;
       }
-
+    var ii = 0;
     allTexts.forEach(function(textTag){
         textTag.setAttribute("contenteditable", "false");
         textTag.setAttribute("style", "min-width:5px;");
@@ -115,26 +139,30 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(content);
         let newElm = document.createElement('input');
         newElm.value = content;
-        newElm.type='text'; 
+        newElm.type='text';
         newElm.style.border = '1px solid red';
         newElm.size = content.length || 5;
         const d = new Date();
-        newElm.name = d.getTime();
+        newElm.name = 'name_'+d.getTime()+'_'+ii;ii++;
         //console.log(newElm.name);
         //newElm.name = newElm.parentNode.classList; //  getTime()
-        textTag.replaceWith(newElm);
-        if (textTag.childNodes){
+
+        //////////////
+        //textTag.replaceWith(newElm);
+        //////////////////////////
+
+        //if (textTag.childNodes){
                 console.log("TC = ", textTag.textContent );
-        }else{
-            console.log("textTag.nodeList_____________________________________________________",textTag.childNodes);
-        }
-        if (textTag.textContent !== ''){
-            textTag.textContent = textTag.textContent + '2'; ////////////////////////////
-        }
+        //}else{
+           // console.log("textTag.nodeList_____________________________________________________",textTag.childNodes);
+        //}
+        //if (textTag.textContent !== ''){
+          //  textTag.textContent = textTag.textContent + '2'; ////////////////////////////
+        //}
         //console.log("NEW EL is: ", typeof newElm);
         //console.log(newElm.parentNode.className);
 
-        newElm.replaceWith(textTag);////////////////////////////
+        //newElm.replaceWith(textTag);////////////////////////////
         
         console.log(getParentByTag(newElm, lookingFor));
         //console.log($.length);

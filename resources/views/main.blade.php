@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Home</title>
+        <title>title Home</title>
      
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
@@ -37,17 +37,10 @@
             @endif
 
             
-            <form action="{{ url('/action') }}" method="POST">  <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
-            @csrf
                 <header class="header">
                     <div class="container">
                         <div class="header__top">
-                            <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
-                            <!-- <input type="text" value="Welcome to Early Birds. We ship every Tuesday
-                            and Thursday. Free shipping above
-                            €25 in The Netherlands."> -->
-                            <h5>Welcome to Early Birds. We ship every Tuesday and Thursday. Free shipping above €25 in The Netherlands.</h5>
-                             
+                            <h5>Welcome to Early Birds. We ship every Tuesday and Thursday. Free shipping above €25 in The Netherlands</h5>
                         </div>
                         <div class="header__main">
                             <nav class="nav-header left-nav">
@@ -114,21 +107,14 @@
                     <section class="small-section">
                         <div class="container">
                             <div class="small-section__block">
-                                <div>Fairtraide</div>
-                                <div>Organic</div>
-                                <div>Climate neutral</div>
+                                <div><e>FairtraidE</e></div>
+                                <div><e>OrganiC</e></div>
+                                <div><e>Climate neutraL</e></div>
                             </div>
                         </div>
                     </section>
                 </header>
-
-                <br><hr> sad <hr> <i> sdfsdfsdf </i>
-                <em> asd </em> <br>  
-                <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
-                <input type="text" value="Welcome to Early Birds. We ship every Tuesday
-                            and Thursday. Free shipping above
-                            €25 in The Netherlands.">
-
+            
             <main id="main_wrapper" class="wrapper">    
                 <section class="our-blends">
                     <div class="container">
@@ -177,7 +163,7 @@
                     <div class="container">
                         <div class="more-than__box">
                             <div class="more-than__text">
-                                MORE THAN JUST A COFFEE <br> SHOP
+                                <h2>MORE THAN JUST A COFFEE <br> SHOP</h2>
                             </div>
                         </div>
                     </div>
@@ -245,10 +231,7 @@
                         </div>    
                     </div>
                 </section>
-<!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
-<input type="text" value="Welcome to Early Birds. We ship every Tuesday
-                            and Thursday. Free shipping above
-                            €25 in The Netherlands.">
+
                 <section class="contact-us">
                     <div class="container">
                         <div class="contact-us__row">
@@ -877,7 +860,7 @@
                                     </div>
                                     <address class="footer__info-address emphasized">Weteringstraat 48,1017 SP</address>
                                     <address class="footer__info-city emphasized">Amsterdam</address>
-                                    <a class="footer__info-tel" href="tel:020-7718364">Tel: 020-7718364</a>      
+                                    <a class="footer__info-tel" href="tel:020-7718364">Tel: 234-7775553</a>      
                                 </div>
                             </div>
                             <div class="footer__coll">
@@ -902,11 +885,7 @@
                         </div>
                     </div>
                 </footer>
-                <!-- ASSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
-                
-                <input name="fname" type="text" value="Welcome to Early Birds. We ship every Tuesday and Thursday. Free shipping above €25 in The Netherlands.">
-                            <button type="submit">SUBMIT</button>
-            </form>
+
             </main>
         </div>
 
