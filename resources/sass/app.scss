@@ -1,5 +1,6 @@
 
 // Fonts
+
 @import url('https://fonts.bunny.net/css?family=Nunito');
 
 // Variables
@@ -8,8 +9,10 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
-@import 'fonts.css';
-@import 'reset';
+
+//@import 'reset.css';
+//@import 'fonts.css';
+
 
 $color_2: #fff;
 $color_4: #000;

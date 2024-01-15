@@ -13,8 +13,13 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <!-- Styles  /../-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/css/reset.css', 'resources/css/fonts.css', 'resources/js/app.js'])
 </head>
 <body>
     <div id="app">
@@ -72,9 +77,20 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @include('layouts.header')
+
+        
+        @yield('content')
+        
+
+        @include('layouts.footer')
+
     </div>
 </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- <script src="storage/js/main.js"></script> -->
+    @vite(['resources/js/main.js'])
+
 </html>

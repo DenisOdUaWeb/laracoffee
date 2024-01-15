@@ -6,17 +6,55 @@ use Illuminate\Http\Request;
 
 class TextController extends Controller
 {
-    public function showlist($pagename)
+    public function index()
     {
-        //echo "<h2> $pagename </h2><br>";
-        $pagefullname = resource_path("views\\$pagename");
-        //echo "<h2> $pagefullname $pagename</h2><br>";
-        $template=file_get_contents($pagefullname);
-        //echo $template;
+        $files_list = scandir(resource_path('views'));
+        
+        foreach($files_list as $value){
+            if($value === '.' || $value === '..' || $value === 'auth' || $value === 'layouts') {continue;}
+            echo '<a href="/text-edit/'.$value.'">'.$value.'</a></br>';
+        }
+        echo "<br>";
+        $files_list2 = scandir(resource_path('views\layouts'));
+        foreach($files_list2 as $value){
+            if($value === '.' || $value === '..'|| $value === 'app.blade.php') {continue;}
+            echo '<a href="/text-edit/layouts+'.$value.'">'.$value.'</a></br>';
+        }
 
+        function find_all_files($dir)
+        {
+        $root = scandir($dir);
+        foreach($root as $value)
+        {
+            if($value === '.' || $value === '..') {continue;}
+
+            if(is_file("$dir/$value")) {$result[]="$dir/$value";continue;}
+
+            foreach(find_all_files("$dir/$value") as $value)
+            {
+                $result[]=$value;
+            }
+
+        }
+
+        return $result;
+
+    }
+
+        $all_files_arr = find_all_files(resource_path('views'));
+        foreach($all_files_arr as $value)
+            {
+                echo '<br>'.$value; 
+            }
+    }
+    public function show($pagename)
+    {
+        $pagename2 = str_replace("+", "\\", $pagename);
+        //dd($pagename2);
+
+        $pagefullname = resource_path("views\\$pagename2");
+        $template=file_get_contents($pagefullname);
         $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template); $teksta = explode('^', $content);
-        //echo '<br>', $content;
-        //echo '________________________________________________________________';
         for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
 	    for ($j=0; $j< count($ff); $j++){ 
 		    echo('<a href="'.$pagename.'\\'.$j.'"
@@ -29,14 +67,12 @@ class TextController extends Controller
             color: black;">'.$ff[$j].'</a>');
 	    };
     }
-    public function particle_to_edit($pagename, $particle_index)
+    public function edit($pagename, $particle_index)
     {
-        
-        $pagefullname = resource_path("views\\$pagename");
-        
-        $template=file_get_contents($pagefullname);
-        
+        $pagename2 = str_replace("+", "\\", $pagename);
 
+        $pagefullname = resource_path("views\\$pagename2");
+        $template=file_get_contents($pagefullname);
         $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template); $teksta = explode('^', $content);
         for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
         $jj=$particle_index;
@@ -44,12 +80,11 @@ class TextController extends Controller
         $kol=1;
         for ($j=0; $j<$jj; $j++) { 
             $kol=$kol + substr_count($ff[$j],$tektekst);
-        };  //'.$pagename.'\\'.$jj.'
+        };
         $csrftoken = csrf_token();
         echo('<div style="margin: 0 auto; text-align: center;"><form method="POST" action="">
             
             <input type="hidden" name="_token" value="'.$csrftoken.'" />
-            
             
             <br><br><h2>Редактирование текстового фрагмента</h2><br><br><textarea style="width:300px;height:300px;" name="mytext">'.$tektekst.'</textarea><br><input style="width: 300px;
             padding-top: 19px;
@@ -61,14 +96,13 @@ class TextController extends Controller
             margin-top: 20px;" type="submit" value="Заменить текст" title="Заменить текст"></form></div>');
 
     }
-    public function edit($pagename, $particle_index){
+    public function update($pagename, $particle_index)
+    {
 
-        //dd('asd');
-        $pagefullname = resource_path("views\\$pagename");
-        
+        $pagename2 = str_replace("+", "\\", $pagename);
+
+        $pagefullname = resource_path("views\\$pagename2");
         $template=file_get_contents($pagefullname);
-        
-
         $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template); $teksta = explode('^', $content);
         for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
         $jj=$particle_index;
@@ -91,9 +125,5 @@ class TextController extends Controller
         echo "<br><br><center>Текст был успешно изменен.<p><a href='../'>Вернуться к списку files</a><p>Что бы увидеть изменения на сайте, обновите страницу (не эту (это админка), a страницу Вашего сайта)";
 
     }
-    public function action (Request $request)
-    {
-        echo "Hi its action from TextController";
-       //dd($request->post());
-    }
+
 }
