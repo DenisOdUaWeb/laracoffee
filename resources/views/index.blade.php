@@ -33,7 +33,7 @@
                                 <img src="storage/img/our_blends/product-2.png">
                             </div>
                             <div class="product-cards__title">
-                                Arabica Bekele
+                                Robusta
                             </div>
                             <div class="product-cards__price">
                                 $46.00
