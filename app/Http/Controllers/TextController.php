@@ -114,31 +114,6 @@ class TextController extends Controller
 
 
 /*
-RegExr was created by gskinner.com.<?php 
-sdfgsdfg
-?>
-RegExr was created by gskinner.com.<?php 
-sdfgsdfg
-?> 
-<?php
-
-<div>  asdasd </div> t the Expression & Text to see matches. Roll over matches or the expression for details. PCRE & JavaScript flavors of RegEx are supported. Validate your expression with Tests mode.
-{{ $asd }}
-The side bar includes a Cheatsheet, full Reference, and Help. You can also Save & Share with the Community and view patterns you create or favorite in My Patterns.function (zsdf  !) {
-asdasd
-}
-{ asd 
-asd }
-as }
-{}
-@if ($asd asd ) 
-@foreach ( $sasd as $value) 
-	<li>Id: {{ $user['id'] }},Name: {{ $user['name'] }}</li>
-@endforeach  ($)'asd asd{  asdasd
-@endif(asd )
-Explore results with the Tools below. Replace & List output custom results. Details lists capture groups. Explain describes your expression in plain English.
-
-
 @if (Route::has('register'))
 RegExr was created by gskinner.com.<?php 
 sdfgsdfg
@@ -153,7 +128,7 @@ asdasd
 }
 { asd  }
 }};
-functioon (){
+functioon ( asd dsfg()){                    LOOOK HERE FUNCTION PROBLEM WITH { THIS BRACKETS}
 
 }
 asd }}
