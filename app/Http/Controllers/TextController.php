@@ -108,6 +108,11 @@ class TextController extends Controller
 // (<[^>]+>)|(@\w+.+[\(.+\)]*)|({{[^}}]+}})|(\<\?php|\$\w+|\w+\()
 
 // (<[^>]+>)|(@\w+.+[\(.+\){}]+)|({+[^}}]+}+)|(\$\w+)|(\w+[\s]\(.*\).)
+// (<[^>]+>)|(@\w+.+[\(.+\){}]+)|({+[^}}]+}+)|(\$\w+)|(\w+[\s]\(.*\).)
+
+//(<[^>]+>)|(@\w+.+[\(.+\){}]+)|({+[^}}]+}+)|(\$\w+)|(\w+[\s]\(.*\).)|(@php[\s\S]*?@endphp)
+
+
 /*
 RegExr was created by gskinner.com.<?php 
 sdfgsdfg
@@ -132,6 +137,87 @@ as }
 @endforeach  ($)'asd asd{  asdasd
 @endif(asd )
 Explore results with the Tools below. Replace & List output custom results. Details lists capture groups. Explain describes your expression in plain English.
+
+
+@if (Route::has('register'))
+RegExr was created by gskinner.com.<?php 
+sdfgsdfg
+?> 
+<?php
+
+<div>  asdasd </div> t the Expression & Text to see matches. Roll over matches or the expression for details. PCRE & JavaScript flavors of RegEx are supported. Validate your expression with Tests mode.
+{{ $asd }}
+{{
+The side bar includes a Cheatsheet, full Reference, and Help. You can also Save & Share with the Community and view patterns you create or favorite in My Patterns.function (zsdf  !) {
+asdasd
+}
+{ asd  }
+}};
+functioon (){
+
+}
+asd }}
+as }
+{}
+@if ($asd asd ) 
+@foreach ( $sasd as $value) 
+	<li>Id: {{ $user['id'] }},Name: {{ $user['name'] }}</li>
+@endforeach  ($)'asd asd{  asdasd
+@endif(asd )
+Explore results with the Tools below. Replace & List output custom results. Details lists capture groups. Explain describes your expression in plain English.
+@if 
+@php
+   if($_POST["submit"]){
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+
+        $missingName = "<p><strong>Please eneter your name.</strong></p>";
+        $invalidEmail = "<p><strong>Invalid Email.</strong></p>";
+
+
+        if($name){
+            $name = filter_var($name, FILTER_SANITIZE_STRING);
+        }else{
+
+            $errors .= $missingName;
+        }
+
+
+          $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+          $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+
+          }else{
+              $errors .= $invalidEmail;
+          }
+        if($errors){
+            $resultMessage = '<div  class="alert alert-danger">' . $errors .'</div>';
+        }else{
+
+            $to = "leads@relevant.systems";
+            $subject = "DijiJock update request form.";
+            $message = "<html>
+                         <body>
+                         <h2 style='color:black'>DijiJock update request form.</h2>
+                <p style='color:green'>Name: $name</p>
+                <p style='color:green'>Email: $email</p>
+                <p style='color:black'>$name has requested DijiJock updates, please forward all updates to $email.</p>
+                         </body>
+                       </html>";
+            $headers = "Content-type: text/html";
+
+sdf            
+            if(mail($to, $subject, $message, $headers)){
+                $resultMessage = '<div  class="alert alert-success">Thank you for the meesage!</div>';
+
+            }else{
+                $resultMessage = '<div  class="alert alert-warning">Email not sent! Please try again later.</div>';
+            }
+        }
+        echo $resultMessage;
+    }             
+@endphp
+
 */
 
 
