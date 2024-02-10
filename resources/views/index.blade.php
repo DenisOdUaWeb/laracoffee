@@ -7,7 +7,7 @@
                 <div class="our-blends__container">
                     <div class="our-blends__info">
                         <div class="our-blends__infotitle">
-                            Our blends deliver on the promise of balance and consistency, <span class="ellipsed">roasted to</span><br>maximize sweetness.
+                            Our blends deliver on the promise of balance and consistency,2 <span class="ellipsed">roasted to</span><br>maximize sweetness.
                         </div>
                         <div class="our-blends__infotext">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.

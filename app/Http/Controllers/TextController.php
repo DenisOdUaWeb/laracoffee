@@ -9,8 +9,8 @@ class TextController extends Controller
     public function index()
     {
         //this file_list array temporary - its should come from config file !!!!!!!!! 
-        $file_list = ['index.blade.php', 'header.blade.php','footer.blade.php', 'welcome.blade.php']; //////////////////////////////////////  
-        /*
+        $file_list = ['main.blade.php', 'index.blade.php', 'header.blade.php','footer.blade.php', 'welcome.blade.php']; //////////////////////////////////////  
+        
         $files_list = scandir(resource_path('views'));
         
         foreach($files_list as $value){
@@ -23,7 +23,7 @@ class TextController extends Controller
             if($value === '.' || $value === '..'|| $value === 'app.blade.php') {continue;}
             echo '<a href="/text-edit/layouts+'.$value.'">'.$value.'</a></br>';
         }
-        */
+        
         function find_all_files($dir, $file_list)
         {
         $root = scandir($dir);
@@ -90,7 +90,7 @@ class TextController extends Controller
     }
     public function show($pagename)
     {
-        $pagename2 = str_replace("+", "\\", $pagename);
+        
         //dd($pagename2);
 
 
@@ -112,6 +112,10 @@ class TextController extends Controller
 
 //(<[^>]+>)|(@\w+.+[\(.+\){}]+)|({+[^}}]+}+)|(\$\w+)|(\w+[\s]\(.*\).)|(@php[\s\S]*?@endphp)
 
+// (<[^>]+>)|({+[^}}]+}+)|(\$\w+)|(\w+[\s]\(.*\).+[?!}][?!\}])|(@php[\s\S]*?@endphp)|(@\w.+\([^)]*\))
+// (<[^>]+>)|({{[^}}][\s\S]*}})|(@php[\s\S]*?@endphp)|(@\w.+\([^)]*\)+)
+
+// <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> -> PROBLEM
 
 /*
 @if (Route::has('register'))
@@ -194,21 +198,24 @@ sdf
 @endphp
 
 */
-
-
-        $pagefullname = resource_path("views\\$pagename2");
+        
+        //$pagename2 = str_replace("+", "\\", $pagename);
+        
+        //$pagefullname = resource_path("views\\$pagename2");
         //dd($pagefullname);
-        $template=file_get_contents($pagefullname);
-        $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template);/*dd($content)*/;$teksta = explode('^', $content);
-        for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
+        //$template=file_get_contents($pagefullname);
+        //$ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template);$teksta = explode('^', $content);
+        //for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
         //dd($ff);
-        $ff2 = array();
-        foreach($ff as $value){
-            if (!preg_match('/(@\w+|\<\?php|{{|\$\w+|\w+\()/', $value) ){ //(!preg_match('/.*@.*/', $value) ){
-                $ff2[] = $value;
-                //print_r($value);
-            }
-        }
+        //$ff2 = array();
+        //foreach($ff as $value){
+        //    if (!preg_match('/(@\w+|\<\?php|{{|\$\w+|\w+\()/', $value) ){ //(!preg_match('/.*@.*/', $value) ){
+        //        $ff2[] = $value;
+        //        //print_r($value);
+        //    }
+        //}
+        $ff2 = $this->textParticlesArrayCreating($pagename);
+
 	    for ($j=0; $j< count($ff2); $j++){ 
 		    echo('<a href="'.$pagename.'\\'.$j.'"
             style="display: block;
@@ -218,10 +225,11 @@ sdf
             margin: 20px;
             background: #989898;
             color: black;">'.$ff2[$j].'</a>');
-	    };
+	    }
     }
     public function edit($pagename, $particle_index)
     {
+        /*
         $pagename2 = str_replace("+", "\\", $pagename);
 
         $pagefullname = resource_path("views\\$pagename2");
@@ -229,9 +237,9 @@ sdf
         //dd($pagefullname);
 
         $template=file_get_contents($pagefullname);
-        $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template); $teksta = explode('^', $content);
+        $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template);$teksta = explode('^', $content);
         for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
-        $jj = $particle_index;
+        
 
         $ff2 = array();
         foreach($ff as $value){
@@ -239,9 +247,13 @@ sdf
                 $ff2[] = $value;
                 //print_r($value);
             }
-        }
+        }*/
 
+        $ff2 = $this->textParticlesArrayCreating($pagename);
+
+        $jj = $particle_index;
         $tektekst = $ff2[$jj];
+
         $kol=1;
         for ($j=0; $j<$jj; $j++) { 
             $kol=$kol + substr_count($ff2[$j],$tektekst);
@@ -263,14 +275,14 @@ sdf
     }
     public function update($pagename, $particle_index)
     {
-
+        /*
         $pagename2 = str_replace("+", "\\", $pagename);
 
         $pagefullname = resource_path("views\\$pagename2");
         $template=file_get_contents($pagefullname);
-        $ff=array(); $content = preg_replace('/<[^>]+>/', '^', $template); $teksta = explode('^', $content);
+        $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template);$teksta = explode('^', $content);
         for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
-        $jj=$particle_index;
+        
 
         $ff2 = array();
         foreach($ff as $value){
@@ -279,9 +291,14 @@ sdf
                 //print_r($value);
             }
         }
+        */
+        $pagefullname = resource_path("views\\$pagename2");  /////////////////////////PROBLEMA  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        $ff2 = $this->textParticlesArrayCreating($pagename);
 
+        $jj=$particle_index;
 
         $tektekst=$ff2[$jj];
+
 	    $kol=1;
         for ($j=0; $j<$jj; $j++) { 
             $kol=$kol + substr_count($ff2[$j],$tektekst);
@@ -299,6 +316,29 @@ sdf
         file_put_contents($pagefullname, $rez);
         echo "<br><br><center>Текст был успешно изменен.<p><a href='../'>Вернуться к списку files</a><p>Что бы увидеть изменения на сайте, обновите страницу (не эту (это админка), a страницу Вашего сайта)";
 
+    }
+
+    private function textParticlesArrayCreating($pagename)
+    {
+        $pagename2 = str_replace("+", "\\", $pagename);
+
+        $pagefullname = resource_path("views\\$pagename2");
+
+        //dd($pagefullname);
+
+        $template=file_get_contents($pagefullname);
+        $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template);$teksta = explode('^', $content);
+        for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
+        
+
+        $ff2 = array();
+        foreach($ff as $value){
+            if (!preg_match('/(@\w+|\<\?php|{{|\$\w+|\w+\()/', $value) ){
+                $ff2[] = $value;
+                //print_r($value);
+            }
+        }
+        return $ff2;
     }
 
 }

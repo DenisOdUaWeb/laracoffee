@@ -12,7 +12,7 @@
                     <li class="nav-header__item"><a class="nav-header__link" href="#">Reserve</a>
                         <img src="storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
-                    <li class="nav-header__item"><a class="nav-header__link" href="#">Shop</a>
+                    <li class="nav-header__item"><a class="nav-header__link" href="#">Shop2</a>
                         <img src="storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
                     <li class="nav-header__item"><a class="nav-header__link" href="#">Blog</a>
