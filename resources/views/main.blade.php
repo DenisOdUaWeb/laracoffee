@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>title Home2</title>
+        <title>title Home</title>
      
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home2</a>
+                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
                     @else
                         <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
 
@@ -45,7 +45,7 @@
                     <div class="header__main">
                         <nav class="nav-header left-nav">
                             <ul class="nav-header__ul" id="nav_sliding_ul">
-                                <li class="nav-header__item"><a class="nav-header__link" href="#">Home page2</a>
+                                <li class="nav-header__item"><a class="nav-header__link" href="#">Home page</a>
                                     <img src="storage/img/svg.qodef-svg--underline.png" alt="underline">
                                 </li>
                                 <li class="nav-header__item"><a class="nav-header__link" href="#">Reserve</a>
