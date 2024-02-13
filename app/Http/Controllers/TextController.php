@@ -275,6 +275,9 @@ sdf
     }
     public function update($pagename, $particle_index)
     {
+        
+
+
         /*
         $pagename2 = str_replace("+", "\\", $pagename);
 
@@ -292,6 +295,9 @@ sdf
             }
         }
         */
+        
+        $pagename2 = str_replace("+", "\\", $pagename);
+
         $pagefullname = resource_path("views\\$pagename2");  /////////////////////////PROBLEMA  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         $ff2 = $this->textParticlesArrayCreating($pagename);
 
