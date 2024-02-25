@@ -11,6 +11,9 @@ class TextController extends Controller
         //this file_list array temporary - its should come from config file !!!!!!!!! 
         $file_list = ['main.blade.php', 'index.blade.php', 'header.blade.php','footer.blade.php', 'welcome.blade.php']; //////////////////////////////////////  
 
+        $file_list = explode(',', config('app.editfiles', 'Laravel'));
+        //dd($file_list);
+
         function find_all_files($dir, $file_list){
 
             $root = scandir($dir);
@@ -37,6 +40,9 @@ class TextController extends Controller
 
         $all_files_arr = find_all_files(resource_path('views'), $file_list);
 
+        echo '<h2 style = "font-family: Arial; text-align:center; color:darkcyan; margin: 15px;">Text Editable Files  List </div>';
+        echo '<div style = "margin : 30px auto; width:300px; #text-align: center">';
+
         foreach($all_files_arr as $value)
             {
                 $patern = '/.*?views\//';
@@ -52,10 +58,11 @@ class TextController extends Controller
                 if (in_array($file_name, $file_list, false)){ ///// ! ???????? 
 
                     echo '<a 
-                    style="underline: none; color: black; font-family: Arial; font-size: 20px; margin: 5px; line-height: 1.3;"
+                    style="text-decoration: none; color: black; font-family: Arial; font-size: 20px; margin-top: 10px; line-height: 1.7;"
                     href="/text-edit/'.$value.'">'.preg_replace($patern, '', $value).'</a></br>';
                 }
             }
+            echo '</div >';
     }
 
     public function show($pagename)
@@ -69,7 +76,9 @@ class TextController extends Controller
             border-radius: 5px;
             padding: 10px; padding-left: 20px; padding-right: 20px;
             margin: 20px;
-            background: #989898;
+            background: lightgray;
+            text-decoration:none;
+            font-family: Arial;
             color: black;">'.$text_array[$j].'</a>');
 	    }
     }
@@ -90,7 +99,7 @@ class TextController extends Controller
             
             <input type="hidden" name="_token" value="'.$csrf_token.'" />
             
-            <br><br><h2>Editing a text fragment</h2><br><br><textarea style="width:300px;height:300px;" name="mytext">'.$tektekst.'</textarea><br><input style="width: 300px;
+            <br><br><h2 style="font-family: Arial;">Editing a text fragment</h2><br><br><textarea style="border-radius:5px;width:300px;height:300px;font-family: Arial;" name="mytext">'.$tektekst.'</textarea><br><input style="width: 300px;
             padding-top: 19px;
             padding-bottom: 22px;
             background-color: #005bff;
@@ -127,7 +136,8 @@ class TextController extends Controller
         $res = str_replace_nth($tektekst, $_POST['mytext'], $subject, $count-1);
         file_put_contents($pagefullname, $res);
 
-        echo "<br><br><center>The text was successfully changed.<p><a href='../'>Return to files list</a><p>To see changes on the site, refresh the page (not this one (this is the admin panel), but the page of your site)";
+        
+        echo "<div style='font-family:Arial; font-size: 18px;'><br><br><center>The text was successfully changed !!!<p><a href='../'>Return to files list</a><p>To see changes on the site, refresh the page (not this one (this is the admin panel), but the page of your site)";
 
     }
 

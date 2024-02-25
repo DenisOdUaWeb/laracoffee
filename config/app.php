@@ -18,6 +18,11 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+
+
+    /* This is the list of the text editable files for the admin panel  */
+    'editfiles' => env('FILES_TEXT_EDITABLE', null),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

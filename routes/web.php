@@ -28,7 +28,9 @@ Route::get('/text-edit/{filename}', [App\Http\Controllers\TextController::class,
 Route::get('/text-edit/{filename}/{text_part_index}', [App\Http\Controllers\TextController::class, 'edit'])->name('edit'); //->where('text_part_index', '[0-9]+');  
 Route::post('/text-edit/{filename}/{text_part_index}', [App\Http\Controllers\TextController::class, 'update'])->name('update');
 
-
+Route::get('/admin', function (){
+    return view('admin');
+});
 
 
 Auth::routes();
