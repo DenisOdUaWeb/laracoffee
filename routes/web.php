@@ -29,10 +29,10 @@ Route::get('/text-edit/{filename}/{text_part_index}', [App\Http\Controllers\Text
 Route::post('/text-edit/{filename}/{text_part_index}', [App\Http\Controllers\TextController::class, 'update'])->name('update');
 
 Route::get('/admin', function (){
-    return view('admin');
+    return view('admin.admin');
 });
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin_home', [App\Http\Controllers\HomeController::class, 'index'])->name('admin_home');

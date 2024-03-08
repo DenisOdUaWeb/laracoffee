@@ -3,3 +3,7 @@ finish with text controller (debagging testing , improving , cleaning)
 make authorisation to the admin page
 
 admin page router ....
+
+all the links to the admit fithures  at the admin blade 
+then we are at home we are loget in and all the rest routes are with auth only all the constructors like 
+text conrtoller only with  auth middleware('auth'); 

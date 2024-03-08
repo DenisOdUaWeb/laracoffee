@@ -50,9 +50,12 @@ body {
 	overflow: hidden;
 }
 .container {
-	overflow: hidden;
+	overflow-x: hidden;
 	max-width: 1920px;
 	margin: 0 auto;
+}
+._overflow_unset{
+	overflow: unset;
 }
 ._relative {
 	position: relative;

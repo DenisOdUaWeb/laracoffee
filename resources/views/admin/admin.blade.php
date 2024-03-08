@@ -12,7 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    
+
     <!-- Styles  /../-->
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -21,7 +21,8 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/css/reset.css', 'resources/css/fonts.css', 'resources/js/app.js'])
 </head>
-    <body>
+<body>
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -75,5 +76,21 @@
                 </div>
             </div>
         </nav>
-    </body>
+
+        
+    <h1>here content</h1>
+        
+        @yield('content')
+        
+
+        
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti? Reprehenderit eum aliquam modi officia facere, ratione pariatur blanditiis recusandae eos quis soluta mollitia odit consectetur cum distinctio porro sapiente!</p>
+    </div>
+</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- <script src="storage/js/main.js"></script> -->
+    @vite(['resources/js/main.js'])
+
 </html>
