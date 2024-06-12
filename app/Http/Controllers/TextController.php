@@ -51,7 +51,8 @@ class TextController extends Controller
     {
         $pagename2 = str_replace("+", "\\", $pagename);
         //dd($pagename2);
-
+        echo 'Choose the TEXT particle';
+        ///////////////////////////////////////////////         HERE {{ do something !}}
         $pagefullname = resource_path("views\\$pagename2");
         $template=file_get_contents($pagefullname);
         $ff=array(); $content=preg_replace('/<[^>]+>/', '^', $template); $teksta = explode('^', $content);
