@@ -2,7 +2,7 @@
 
 @section('content')
     <h2>asdasd   </h2>
-    <main id="main_wrapper" class="wrapper">    
+    <main id="main_wrapper" class="wrapper">
         <section class="our-blends">
             <div class="container">
                 <div class="our-blends__container">
@@ -14,19 +14,20 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.
                         </div>
                         <div class="our-blends__infomore _infomore">
-                            <button type="button" class="our-blends__infobtn _infomore__btn">View More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                            <button type="button" class="our-blends__infobtn _infomore__btn">View More</button><img class="our-blends__infoimg" src="storage/img/arrow.png">
                         </div>
                     </div>
                     <div class="our-blends__cards product-cards">
                         <div class="product-cards__item">
                             <div class="product-cards__img">
-                                <img src="storage/img/our_blends/product-1.png">
+                                <!--<img src="storage/img/our_blends/product-2.png">-->
+                                <img src="{{$product->image}}">
                             </div>
                             <div class="product-cards__title">
-                                Arabica Bekele
+                            {{$product->name}}
                             </div>
                             <div class="product-cards__price">
-                                $43.00
+                            {{$product->price}}
                             </div>
                         </div>
                         <div class="product-cards__item">
@@ -43,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
         <section class="more-than">
@@ -61,21 +62,6 @@
                 <div class="phrase-carousel__box">
                     <div class="phrase-carousel__coll">
                         <div id="phrase_carousel" class="phrase_carousel phrase-carousel__carousel owl-carousel "> <!-- owl-theme -->
-                            <div class="phrase-carousel__item"> 
-                                <div class="phrase-carousel__stars">
-                                    <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
-                                    <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
-                                    <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
-                                    <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
-                                    <img class="phrase-carousel__star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
-                                </div>
-                                <div class="phrase-carousel__text _anton-35-black">
-                                    "Another reason people just can't keep away from their local coffee shop is the quality of coffee that's on offer. "
-                                </div>
-                                <div class="phrase-carousel__author">
-                                    Henry Monro
-                                </div>
-                            </div>
                             <div class="phrase-carousel__item">
                                 <div class="phrase-carousel__stars">
                                     <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
@@ -106,16 +92,31 @@
                                     Henry Monro
                                 </div>
                             </div>
-                            
+                            <div class="phrase-carousel__item">
+                                <div class="phrase-carousel__stars">
+                                    <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
+                                    <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
+                                    <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
+                                    <img class="phrase-carousel__star active-star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
+                                    <img class="phrase-carousel__star" src="storage/img/phrase_carousel/star-painted.png" alt="star p">
+                                </div>
+                                <div class="phrase-carousel__text _anton-35-black">
+                                    "Another reason people just can't keep away from their local coffee shop is the quality of coffee that's on offer. "
+                                </div>
+                                <div class="phrase-carousel__author">
+                                    Henry Monro
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="phrase-carousel__coll">
                         <div class="phrase-carousel__right-img">
                             <img src="storage/img/phrase_carousel/img2.jpg" alt="coffe img">
-                        </div>   
+                        </div>
                     </div>
-                    
-                </div>    
+
+                </div>
             </div>
         </section>
 
@@ -147,18 +148,18 @@
                             </div>
                             <div class="contact-us__text">
                                 <p>Weteringstraat 48,1017, Amsterdam</p>
-                                
+
                                 <p>Tel: 020-7718364</p>
-                                <p>Email: earlybirds@info.com</p> 
-                                
-                                <p> <span class="contact-us__time">Mon-Fri</span><span class="contact-us__dots">.........</span><span class="contact-us__time">6.45am-3.00pm</span></p> 
+                                <p>Email: earlybirds@info.com</p>
+
+                                <p> <span class="contact-us__time">Mon-Fri</span><span class="contact-us__dots">.........</span><span class="contact-us__time">6.45am-3.00pm</span></p>
                                 <p> <span class="contact-us__time">Sat-Sun</span><span class="contact-us__dots">.........</span><span class="contact-us__time">8.30am-4.00pm</span></p>
                             </div>
                             <div class="contact-us__btn black-btn">
                                 <button type="button" class="black-btn__btn">Contact us</button>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -219,14 +220,14 @@
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
 
         <section class="food">
             <div class="container">
                 <div class="food__wrapper-row">
                     <div class="food__left-coll">
                         <div class="food__title _big-title">
-                            <h3>swing&nbspby our&nbspplace <br>we also <span class="_relative"><span class="ellipsed _absolute">have food.</span></span> </h3> 
+                            <h3>swing&nbspby our&nbspplace <br>we also <span class="_relative"><span class="ellipsed _absolute">have food.</span></span> </h3>
                         </div>
                         <div class="food__img">
                             <img src="storage/img/food/food_img.png">
@@ -269,7 +270,7 @@
                                 <div class="food__right-coll-item-text">
                                     Aliquam ut arcu sodales, gravida quam vitae.
                                 </div>
-                            </div>    
+                            </div>
                             <div class="food__right-coll-item-more _infomore">
                                 <button type="button" class="our-blends__infobtn _infomore__btn">View More</button>
                                 <img class="our-blends__infoimg" src="storage/img/arrow.png">
@@ -292,7 +293,7 @@
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
 
         <section class="reserve">
             <div class="reserve__container container">
@@ -319,7 +320,7 @@
                     </div>
                 </div>
             </div>
-        </section>  
+        </section>
 
         <section class="our-team">
             <div class="container">
@@ -366,7 +367,7 @@
                                 <img src="storage/img/our_team/4.jpg" alt="coffee team member photo">
                             </div>
                             <div class="our-team-member__name">
-                                Jonas Hanks 
+                                Jonas Hanks
                             </div>
                             <div class="our-team-member__job-title">
                                 Media manager
@@ -431,7 +432,7 @@
                                         Make sure your coffee is as fresh as it can be.
                                     </div>
                                     <div class="posts-card__infomore _infomore">
-                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
                             </div>
@@ -454,7 +455,7 @@
                                         The Best Coffee Advent Calendars of this year
                                     </div>
                                     <div class="posts-card__infomore _infomore">
-                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
                             </div>
@@ -477,7 +478,7 @@
                                         The Most Common Way People Drink Noir Café
                                     </div>
                                     <div class="posts-card__infomore _infomore">
-                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
                             </div>
@@ -500,7 +501,7 @@
                                         Coffee Beans Prepared In Four Different Ways
                                     </div>
                                     <div class="posts-card__infomore _infomore">
-                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
                             </div>
@@ -523,7 +524,7 @@
                                         The Baristan Kettle is a Beacon for Preparation
                                     </div>
                                     <div class="posts-card__infomore _infomore">
-                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
                             </div>
@@ -546,10 +547,10 @@
                                         The World’s Best Coffee Tours: Brasil, Columbi
                                     </div>
                                     <div class="posts-card__infomore _infomore">
-                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png"> 
+                                        <button type="button" class="our-blends__infobtn _infomore__btn">Read More</button><img class="our-blends__infoimg" src="storage/img/arrow.png">
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -721,12 +722,12 @@
         <section class="map">
             <div class="container">
                 <div class="map__frame mb-5">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2079.7238979902613!2d1.5383474956499115!3d42.509115643868476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssa!4v1699957724072!5m2!1sen!2ssa" 
-                        width="320" 
-                        height="420" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2079.7238979902613!2d1.5383474956499115!3d42.509115643868476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssa!4v1699957724072!5m2!1sen!2ssa"
+                        width="320"
+                        height="420"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>

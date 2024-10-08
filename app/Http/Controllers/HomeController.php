@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Product;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +23,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $products = Product::all();
+        $product = $products[0];
+
+        return view('home',[
+            'product' => $product,
+        ]);
     }
+    //public function list()
+    //{
+        // FOR NOW JUST ONE PRODUC FROM THE LIST
+       // $products = Product::all();
+        //$product = $products[0];
+        //return $product;
+    //}
 }
