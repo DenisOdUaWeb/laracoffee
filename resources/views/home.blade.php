@@ -21,24 +21,24 @@
                         <div class="product-cards__item">
                             <div class="product-cards__img">
                                 <!--<img src="storage/img/our_blends/product-2.png">-->
-                                <img src="{{$product->image}}">
+                                <img src="{{url($product1->image)}}">
                             </div>
                             <div class="product-cards__title">
-                            {{$product->name}}
+                                {{$product1->name}}
                             </div>
                             <div class="product-cards__price">
-                            {{$product->price}}
+                                {{$product1->price}}
                             </div>
                         </div>
                         <div class="product-cards__item">
                             <div class="product-cards__img">
-                                <img src="storage/img/our_blends/product-2.png">
+                            <img src="{{url($product2->image)}}">
                             </div>
                             <div class="product-cards__title">
-                                Arabica Bekele
+                                {{$product2->name}}
                             </div>
                             <div class="product-cards__price">
-                                $46.00
+                                {{$product2->price}}
                             </div>
                         </div>
                     </div>
@@ -172,50 +172,19 @@
                 </div>
                 <div class="thats-right-for-you__shop-wrapper">
                     <div class="product-cards">
+                        @foreach($showcase as $product)
                         <div class="product-cards__item">
                             <div class="product-cards__img">
-                                <img src="storage/img/product-cards/img1.png">
+                                <img src="{{url($product->image)}}">
                             </div>
                             <div class="product-cards__title">
-                                Arabica Bekele Robusta
+                                {{$product->name}}
                             </div>
                             <div class="product-cards__price">
-                                $37.00
+                            {{$product->price}}
                             </div>
                         </div>
-                        <div class="product-cards__item">
-                            <div class="product-cards__img">
-                                <img src="storage/img/product-cards/img2.png">
-                            </div>
-                            <div class="product-cards__title">
-                                Arabica Bekele
-                            </div>
-                            <div class="product-cards__price">
-                                $41.00
-                            </div>
-                        </div>
-                        <div class="product-cards__item">
-                            <div class="product-cards__img">
-                                <img src="storage/img/product-cards/img3.png">
-                            </div>
-                            <div class="product-cards__title">
-                                Arabica Bekele
-                            </div>
-                            <div class="product-cards__price">
-                                $36.00
-                            </div>
-                        </div>
-                        <div class="product-cards__item">
-                            <div class="product-cards__img">
-                                <img src="storage/img/product-cards/img4.png">
-                            </div>
-                            <div class="product-cards__title">
-                                Arabica Bekele
-                            </div>
-                            <div class="product-cards__price">
-                                $45.00
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>

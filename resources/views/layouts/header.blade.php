@@ -6,13 +6,13 @@
         <div class="header__main">
             <nav class="nav-header left-nav">
                 <ul class="nav-header__ul" id="nav_sliding_ul">
-                    <li class="nav-header__item"><a class="nav-header__link" href="#">Home page</a>
+                    <li class="nav-header__item"><a class="nav-header__link" href="{{url('/')}}">Home page</a>
                         <img src="storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
                     <li class="nav-header__item"><a class="nav-header__link" href="#">Reserve</a>
                         <img src="storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
-                    <li class="nav-header__item"><a class="nav-header__link" href="#">Shop</a>
+                    <li class="nav-header__item"><a class="nav-header__link" href="{{url('products')}}">Shop</a>
                         <img src="storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
                     <li class="nav-header__item"><a class="nav-header__link" href="#">Blog</a>
@@ -30,7 +30,7 @@
             <div class="middle-img">
                 <img src="storage/img/logo-black-1.png.png" alt="logo">
             </div>
-            
+
             <div class="header__rigthside d-flex">
                 <nav class="nav-header right-nav">
                     <ul class ="nav-header__ul">
@@ -42,7 +42,7 @@
                         </li>
                     </ul>
                 </nav>
-                
+
                 <div class="search-png">
                     <img src="storage/img/svg.qodef-svg--side-area-opener.png" alt="logo star png">
                 </div>

@@ -7,9 +7,11 @@ use App\Models\Product;
 
 class ProductsController extends Controller
 {
-    public function list()
+    public function index()
     {
         $products = Product::all();
-        dd($products);
+        //dump($products);
+
+        return view('shop.products', compact(['products',]));
     }
 }

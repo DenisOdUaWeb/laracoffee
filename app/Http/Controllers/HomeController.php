@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -24,11 +24,17 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::all();
-        $product = $products[0];
+        $product1 = $products[0];
+        $product2 = $products[1];
 
-        return view('home',[
-            'product' => $product,
-        ]);
+        $showcase = Product::skip(2)->take(4)->get(); //orderBy('id','DESC')
+        //dd($showcase);
+
+        return view('home', compact(
+            ['product1',
+            'product2',
+            'showcase',
+        ]));
     }
     //public function list()
     //{

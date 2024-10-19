@@ -18,14 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
-Route::get('/{something}', function () { /// ??????????????
-    $var = 'some data';
-    $var2arr = Request::all();
-    return view('home', ['var'=> $var, 'var2' => $var2arr]);
-})->where('something', '[0-9]+');
 
-//Route::get('/list', [App\Http\Controllers\ProductsController::class, 'list'])
-//->name('list'); // TEST LIST OF THE PRODUCTS
+
+Route::get('/products', [App\Http\Controllers\ProductsController::class, 'index'])
+->name('index'); // TEST LIST OF THE PRODUCTS
 
 Route::get('/text-edit', [App\Http\Controllers\TextController::class, 'index'])->name('index');
 Route::get('/text-edit/{filename}', [App\Http\Controllers\TextController::class, 'show'])->name('show');// where filename ['.blade.php']+ ?????
