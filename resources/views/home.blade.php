@@ -1,5 +1,9 @@
 @extends('layouts/app')
 
+@section('title')
+    <title>Lara Home Coffee</title>
+@endsection
+
 @section('content')
     <h2>asdasd   </h2>
     <main id="main_wrapper" class="wrapper">

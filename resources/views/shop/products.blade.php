@@ -1,5 +1,9 @@
 @extends('layouts/app')
 
+@section('title')
+    "Lara Shop"
+@endsection
+
 @section('content')
 
   <div class="container">
