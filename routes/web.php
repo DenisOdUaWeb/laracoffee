@@ -29,7 +29,7 @@ Route::get('/text-edit/{filename}/{text_part_index}', [App\Http\Controllers\Text
 Route::post('/text-edit/{filename}/{text_part_index}', [App\Http\Controllers\TextController::class, 'update'])->name('update');
 
 Route::get('/admin', function (){
-    return view('admin.admin');
+    return view('admin/login_admin');
 });
 
 

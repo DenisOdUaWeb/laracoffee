@@ -22,12 +22,15 @@
     @vite(['resources/sass/app.scss', 'resources/css/reset.css', 'resources/css/fonts.css', 'resources/js/app.js'])
 </head>
 <body>
-    <h1>admin_app page</h1>
+    
     <div id="app">
+        
+        <h1  class="p-4">admin_app page</h1>
+       
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container _overflow_unset">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand p-4" href="{{ url('/') }}">
+                    {{ config('app.name', 'LaraCaffe') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
