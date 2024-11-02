@@ -119,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var allTexts = document.querySelectorAll("e, h1, h2, h3, h4, h5, h6, p, address");
     //console.log(wholeDivs);
     //wholeDivs.setAttribute("name", "asdasd");
-
     //const buttons = document.querySelectorAll("button");
     //console.log(buttons);
 
@@ -163,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
         //console.log(newElm.parentNode.className);
 
         //newElm.replaceWith(textTag);////////////////////////////
-
         console.log(getParentByTag(newElm, lookingFor));
         //console.log($.length);
 
