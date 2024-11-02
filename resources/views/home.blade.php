@@ -23,27 +23,34 @@
                     </div>
                     <div class="our-blends__cards product-cards">
                         <div class="product-cards__item">
-                            <div class="product-cards__img">
+                            <div class="product-cards__img position-relative">
                                 <!--<img src="storage/img/our_blends/product-2.png">-->
-                                <img src="{{url($product1->image)}}">
+                                <img src="{{url('/'.$showcaseitem1->image )}}">
+                                @can('viewAny',   \App\Models\Showcaseitem::class)
+                                <a class="position-absolute" style="left:10px;" href="/showcase/{{$showcaseitem1->id}}/edit"><button type="submit" class='btn btn-primary my-4'>Edit Product</button></a>
+                                @endcan
                             </div>
                             <div class="product-cards__title">
-                                {{$product1->name}}
+                                {{$showcaseitem1->name}}
                             </div>
                             <div class="product-cards__price">
-                                {{$product1->price}}
+                                {{$showcaseitem1->price}}
                             </div>
                         </div>
                         <div class="product-cards__item">
-                            <div class="product-cards__img">
-                            <img src="{{url($product2->image)}}">
+                            <div class="product-cards__img position-relative">
+                            <img src="{{url($showcaseitem2->image)}}">
+                            @can('viewAny',   \App\Models\Showcaseitem::class)
+                            <a class="position-absolute" style="left:10px;" href="/showcase/{{$showcaseitem2->id}}/edit"><button type="submit" class='btn btn-primary my-4'>Edit Product</button></a>
+                            @endcan
                             </div>
                             <div class="product-cards__title">
-                                {{$product2->name}}
+                                {{$showcaseitem2->name}}
                             </div>
                             <div class="product-cards__price">
-                                {{$product2->price}}
+                                {{$showcaseitem2->price}}
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -176,18 +183,23 @@
                 </div>
                 <div class="thats-right-for-you__shop-wrapper">
                     <div class="product-cards">
-                        @foreach($showcase as $product)
+                        @foreach($showcase as $showcaseitem)
+<!-- NEW REST FULL CREATED FOR SHOWCASE -->
                         <div class="product-cards__item">
-                            <div class="product-cards__img">
-                                <img src="{{url($product->image)}}">
+                            <div class="product-cards__img position-relative">
+                                <img src="{{url($showcaseitem->image)}}">
+                                @can('create', \App\Models\Product::class)
+                                <a class="position-absolute" style="left:10px;" href="showcase/{{$showcaseitem->id}}/edit"><button type="submit" class='btn btn-primary my-4'>Edit Product</button></a>
+                                @endcan
                             </div>
                             <div class="product-cards__title">
-                                {{$product->name}}
+                                {{$showcaseitem->name}}
                             </div>
                             <div class="product-cards__price">
-                            {{$product->price}}
+                            {{$showcaseitem->price}}
                             </div>
                         </div>
+
                         @endforeach
 
                     </div>

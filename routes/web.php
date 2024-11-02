@@ -21,7 +21,25 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 
 
 Route::get('/products', [App\Http\Controllers\ProductsController::class, 'index'])
-->name('index'); // TEST LIST OF THE PRODUCTS
+->name('index');
+Route::post('/products', [App\Http\Controllers\ProductsController::class, 'store'])
+->name('store');
+Route::delete('/products/{product}', [App\Http\Controllers\ProductsController::class, 'destroy'])
+->name('destroy');
+Route::get('/products/{product}', [App\Http\Controllers\ProductsController::class, 'edit'])
+->name('edit'); // ??????????????????????? /products/{product}/edit
+Route::patch('/products/{product}', [App\Http\Controllers\ProductsController::class, 'update'])
+->name('update');
+
+
+Route::post('/showcase', [App\Http\Controllers\ShowcaseitemsController::class, 'store'])
+->name('store');
+Route::delete('/showcase/{showcaseitem}', [App\Http\Controllers\ShowcaseitemsController::class, 'destroy'])
+->name('destroy');
+Route::get('/showcase/{showcaseitem}/edit', [App\Http\Controllers\ShowcaseitemsController::class, 'edit'])
+->name('edit');
+Route::patch('/showcase/{showcaseitem}', [App\Http\Controllers\ShowcaseitemsController::class, 'update'])
+->name('update');
 
 Route::get('/text-edit', [App\Http\Controllers\TextController::class, 'index'])->name('index');
 Route::get('/text-edit/{filename}', [App\Http\Controllers\TextController::class, 'show'])->name('show');// where filename ['.blade.php']+ ?????

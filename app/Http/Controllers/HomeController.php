@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\showcaseitem;
 class HomeController extends Controller
 {
     /**
@@ -23,16 +24,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        $product1 = $products[0];
-        $product2 = $products[1];
+        $showcaseitems = Showcaseitem::all();
+        $showcaseitem1 = $showcaseitems[0];
+        $showcaseitem2 = $showcaseitems[1];
 
-        $showcase = Product::skip(2)->take(4)->get(); //orderBy('id','DESC')
+        $showcase = Showcaseitem::skip(2)->take(4)->get(); //orderBy('id','DESC')
         //dd($showcase);
 
         return view('home', compact(
-            ['product1',
-            'product2',
+            ['showcaseitem1',
+            'showcaseitem2',
             'showcase',
         ]));
     }

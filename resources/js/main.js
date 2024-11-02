@@ -3,11 +3,11 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /*var headerCarouselHTML = 
+    /*var headerCarouselHTML =
         "<div id='header_owl_carousel' class='header__carousel owl-carousel'>" +
                     "<div class='owl-carousel__item'>" +
-                        "<img src='img/image1.jpg' alt='owl2 carousel image 1'>" + 
-                    "</div>" + 
+                        "<img src='img/image1.jpg' alt='owl2 carousel image 1'>" +
+                    "</div>" +
                     "<div class='owl-carousel__item'>" +
                             "<img src='img/image2.jpg' alt='owl carousel image 2 '>" +
                     "</div>" +
@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
      //OWL CAROUSEL
-     
-     const leftArrow = '<img src="storage/img/left-arrow.jpg">';
-     const rightArrow = '<img src="storage/img/right-arrow.jpg">';
+
+     const leftArrow = '<img src="/storage/img/left-arrow.jpg">';
+     const rightArrow = '<img src="/storage/img/right-arrow.jpg">';
     $('#header_owl_carousel').owlCarousel({
         loop:true,
         margin: 10,
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             //}
         }
     });
-    //END OWL CAROUSEL  
+    //END OWL CAROUSEL
 
     //phrase_carousel begining
     $('#phrase_carousel').owlCarousel({
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var arrteksts = content.split('^');
     console.log(arrteksts);
 	//for ($j=0; $j< count($teksta); $j++) { if(strlen(trim($teksta[$j]))>1) $ff[]=(trim($teksta[$j])); };
-	//for ($j=0; $j< count($ff); $j++) { 
+	//for ($j=0; $j< count($ff); $j++) {
 		//echo('<a href="login.php?mode=3&j='.$j.'" class="mytext">'.$ff[$j].'</a>');
 	//};
 
@@ -108,8 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    //phrase_carousel end 
-     
+    //phrase_carousel end
+
     //TESTING
 
     //var mainDoc = document.getElementById('main_wrapper');
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var allTexts = document.querySelectorAll("e, h1, h2, h3, h4, h5, h6, p, address");
     //console.log(wholeDivs);
     //wholeDivs.setAttribute("name", "asdasd");
-    
+
     //const buttons = document.querySelectorAll("button");
     //console.log(buttons);
 
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //console.log(newElm.parentNode.className);
 
         //newElm.replaceWith(textTag);////////////////////////////
-        
+
         console.log(getParentByTag(newElm, lookingFor));
         //console.log($.length);
 
@@ -174,11 +174,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-/////////////////////////////////////// tests remove after 
+/////////////////////////////////////// tests remove after
  document.addEventListener("DOMContentLoaded",function () {
-        
+
         var myFunction = function(){
-            console.log("Changed !!!"); 
+            console.log("Changed !!!");
             var mainDoc = document.getElementById('main_wrapper');
             //wholeDoc.classList.add('asd2');
             console.log(mainDoc);
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.setTimeout(myFunction, 15000);
     });
 
-/////////////////////////////////////// tests remove after 
+/////////////////////////////////////// tests remove after
 const a = {
     x: 1,
     y: "2",
@@ -201,4 +201,3 @@ console.log("y=", typeof a.y);
 console.log("f z=", typeof a.z);
 console.log("void =",void " ");
 a.z();
- 
