@@ -5,7 +5,32 @@
 @endsection
 
 @section('content')
-    <h2>asdasd   </h2>
+    <div id="container_owl_carousel" class="container">
+        <div id="header_owl_carousel" class="header__carousel owl-carousel">
+            <div class="owl-carousel__item">
+                <img src="/storage/img/image1.jpg" alt="owl2 carousel image 1">
+            </div>
+            <div class="owl-carousel__item">
+                    <img src="/storage/img/image2.jpg" alt="owl carousel image 2 ">
+            </div>
+            <div class="owl-carousel__item">
+                <img src="/storage/img/image1.jpg" alt="owl2 carousel image 1">
+            </div>
+            <div class="owl-carousel__item">
+                <img src="/storage/img/image2.jpg" alt="owl carousel image 2 ">
+            </div>
+        </div>
+    </div>
+    <section class="small-section">
+        <div class="container">
+            <div class="small-section__block">
+                <div>Fairtraide</div>
+                <div>Organic</div>
+                <div>Climate neutral</div>
+            </div>
+        </div>
+    </section>
+
     <main id="main_wrapper" class="wrapper">
         <section class="our-blends">
             <div class="container">
