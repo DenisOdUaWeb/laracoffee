@@ -263,7 +263,9 @@ body {
 }
 .product-cards__shop_item{
 	margin-bottom: -1px;
-	max-width: 25%;
+	//max-width: 25%;
+	height: auto;
+	max-height: 645px;
 	border-bottom: 1px solid #000;
 }
 .product-cards__img {
@@ -907,7 +909,7 @@ body {
 	.product-cards__shop_item {
 		flex: 1 1 50%;
 		height: auto;
-		max-width: 50%;
+		//max-width: 50%;
 		border-bottom: 1px solid #000;
 	}
 	.phrase-carousel__text {
@@ -991,6 +993,11 @@ body {
 		margin: 10px auto;
 		text-align: center;
 	}
+	.product-cards__shoptitle {
+		margin: 10px 0 25px 43px;
+		text-align: left;
+	}
+
 	.food__right-coll-item {
 		padding: 15px;
 	}

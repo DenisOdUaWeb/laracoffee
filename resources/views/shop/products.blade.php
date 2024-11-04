@@ -66,14 +66,17 @@
                                 <img src="{{url($product->image)}}"><!-- IMAGE -->
                                 <!-- CAN -->
                                 @can('create', \App\Models\Product::class)
-                                <input  class="form-control position-absolute" style="left:10px;top:10px;" name="image" type="file">
+
+                                <button type="submit" class='btn btn-primary my-4 position-absolute' style="left:20px;top:20px;">Edit Product</button>
+
+                                <input  class="form-control position-absolute" style="max-width:70%;left:20px;bottom:20px;" name="image" type="file">
                                 @endcan
                                 <!-- CAN -->
                             </div>
 
 
 
-                            <div class="product-cards__title position-relative">
+                            <div class="product-cards__title product-cards__shoptitle position-relative">
                                 {{$product->name}}
                                 @can('create', \App\Models\Product::class)
                                 <input value="{{old('name') ?? $product->name}}" class="form-control position-absolute" style="top:0px;left:-5px;width:inherit;" name="name" type="text" placeholder="New name">
@@ -83,14 +86,14 @@
                                 {{$product->price}}
                                 @can('create', \App\Models\Product::class)
                                 <input value="{{old('name') ?? $product->price}}" class="form-control position-absolute" style="top:0px; left:-5px;width:inherit;" name="price" type="text" placeholder="New price">
-                                <button type="submit" class='btn btn-primary my-4'>Edit Product</button>
+
                                 @endcan
                             </div>
 
                             </div>
                             </form>
                             @can('create', \App\Models\Product::class)
-                            <form class="position-absolute" style="display:block;bottom:10px;right:10px; width:100px" action="/products/{{ $product->id}}" method="post">
+                            <form class="position-absolute" style="display:block;bottom:20px;right:20px; width:108px" action="/products/{{ $product->id}}" method="post">
                             @method('DELETE')
                             @csrf
                                 <button type="submit" class='btn btn-danger'>Delete Product</button>

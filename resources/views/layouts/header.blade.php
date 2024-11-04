@@ -24,6 +24,10 @@
                     <li class="nav-header__item displayonless1024 d-none"><a class="nav-header__link" href="#">cart(0)</a>
                         <img src="/storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
+                    @can('viewAny',   \App\Models\Showcaseitem::class)
+                    <li class="nav-header__item"><a class="nav-header__link" href="/text-edit"><button class="btn btn-warning">Text Editor</button></a>
+                    </li>
+                    @endcan
                 </ul>
                     <button type="button" id="bmenubtn"><img width ="44px" height="40px" src="/storage/img/burgermenu.png" alt="bmenu_btn"></button>
             </nav>

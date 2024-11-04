@@ -5,6 +5,10 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
+    /* This is the list of the text editable files for the admin panel  wich you can edit in env file*/
+    'editfiles' => env('FILES_TEXT_EDITABLE', null),
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -17,6 +21,9 @@ return [
     */
 
     'name' => env('APP_NAME', 'Coffee station'),
+
+
+
 
     /*
     |--------------------------------------------------------------------------
