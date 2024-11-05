@@ -237,7 +237,7 @@
                 <div class="food__wrapper-row">
                     <div class="food__left-coll">
                         <div class="food__title _big-title">
-                            <h3>swing&nbspby our&nbspplace <br>we also <span class="_relative"><span class="ellipsed _absolute">have food.</span></span> </h3>
+                            <h3>swing&nbspby our&nbspplace <br>we also <span class="_relative"><span class="ellipsed _absolute">have food</span></span> </h3>
                         </div>
                         <div class="food__img">
                             <img src="storage/img/food/food_img.png">
@@ -305,26 +305,44 @@
             </div>
         </section>
 
-        <section class="reserve">
+        <section id="reserve" class="reserve">
             <div class="reserve__container container">
                 <div class="reserve__wrapper">
                     <div class="reserve__title">
                         Reserve Your Table
                     </div>
-                    <div class="reserve__ul-wrapper">
-                        <div class="reserve__item">
-                            1 person
+                    <form action="/reserve" method="post">
+                        @csrf
+                        <div class="reserve__ul-wrapper">
+                            <div class="reserve__item">
+                                <select name="persons" id=" ">
+                                    <option value="1">one  person</option>
+                                    <option value="2">two  persons</option>
+                                    <option value="3">three persons</option>
+                                    <option value="4">four persons</option>
+                                </select>
+                            </div>
+
+                            <div class="reserve__item">
+                                <select name="date" id="">
+                                    <option value="today ">Today ({{ date('Y-m-d');}})</option>
+                                    <option value="tomorrow">Tomorrow ({{ date('Y-m-d', strtotime(' +1 day'));}})</option>
+                                    <option value="after tomorrow">After tomorrow ({{ date('Y-m-d', strtotime(' +2 day'));}})</option>
+                                </select>
+                            </div>
+                            <div class="reserve__item">
+                            <select name="time" id="">
+                                    <option value="Breakfast"> Breakfast</option>
+                                    <option value="Lunch">Lunch</option>
+                                    <option value="Diner">Dinner</option>
+                                </select>
+                            </div>
+                            <div class="reserve__item reserve__item_btn black-btn">
+                                <button type="submit" class="black-btn__btn">Book a Table</button>
+                            </div>
                         </div>
-                        <div class="reserve__item">
-                            21.10.22
-                        </div>
-                        <div class="reserve__item">
-                            11:00
-                        </div>
-                        <div class="reserve__item reserve__item_btn black-btn">
-                            <button type="button" class="black-btn__btn">Book a Table</button>
-                        </div>
-                    </div>
+                    </form>
+
                     <div class="reserve__powered">
                         *Powered by OpenTable
                     </div>

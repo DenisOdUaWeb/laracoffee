@@ -4,7 +4,7 @@
     <H1 class="p-4">WELKOME TO THE ADMIN PANEL</H1>
 </div>
 
-@section('content') <!-- this section toesnt working as there is no layout for the admin -->    
+@section('content') <!-- this section doesnt work as there is no layout for the admin -->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -34,7 +34,7 @@
                 <button class="admin-section__button admin-panel-btn btn btn-primary btn-lg"><a href="{{ url('/text-edit') }}">Text Editor</a></button>
             </div>
         </div>
-    </div> 
+    </div>
 </section>
 <section class="admin-section">
     <div class="container">
@@ -43,7 +43,7 @@
                 <button class="admin-section__button admin-panel-btn btn btn-primary btn-lg"><a href="{{ url('/text-edit') }}">Blog Editor (DROP DOWN MENU)</a></button>
             </div>
         </div>
-    </div> 
+    </div>
 </section>
 
 @endsection

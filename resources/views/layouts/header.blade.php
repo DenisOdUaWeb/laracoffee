@@ -9,7 +9,7 @@
                     <li class="nav-header__item"><a class="nav-header__link" href="{{url('/')}}">Home page</a>
                         <img src="/storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
-                    <li class="nav-header__item"><a class="nav-header__link" href="#">Reserve</a>
+                    <li class="nav-header__item"><a class="nav-header__link" href="#reserve">Reserve</a>
                         <img src="/storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
                     <li class="nav-header__item"><a class="nav-header__link" href="{{url('products')}}">Shop</a>
