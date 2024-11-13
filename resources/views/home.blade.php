@@ -325,9 +325,9 @@
 
                             <div class="reserve__item">
                                 <select name="date" id="">
-                                    <option value="today ">Today ({{ date('Y-m-d');}})</option>
-                                    <option value="tomorrow">Tomorrow ({{ date('Y-m-d', strtotime(' +1 day'));}})</option>
-                                    <option value="after tomorrow">After tomorrow ({{ date('Y-m-d', strtotime(' +2 day'));}})</option>
+                                    <option value="({{ date('Y-m-d');}}) Today">Today ({{ date('Y-m-d');}})</option>
+                                    <option value="({{ date('Y-m-d', strtotime(' +1 day'));}}) Tomorrow">Tomorrow ({{ date('Y-m-d', strtotime(' +1 day'));}})</option>
+                                    <option value="({{ date('Y-m-d', strtotime(' +2 day'));}}) After tomorrow">After tomorrow ({{ date('Y-m-d', strtotime(' +2 day'));}})</option>
                                 </select>
                             </div>
                             <div class="reserve__item">

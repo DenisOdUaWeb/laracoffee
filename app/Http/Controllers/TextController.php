@@ -8,6 +8,7 @@ class TextController extends Controller
 {
     public function index()
     {
+        echo '<a href="/">HOME</a>';
         //this file_list array temporary - its should come from config file !!!!!!!!!
         $file_list = ['main.blade.php', 'index.blade.php', 'header.blade.php','footer.blade.php', 'welcome.blade.php']; //////////////////////////////////////
 

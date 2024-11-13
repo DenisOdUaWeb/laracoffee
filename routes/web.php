@@ -31,6 +31,19 @@ Route::get('/products/{product}', [App\Http\Controllers\ProductsController::clas
 Route::patch('/products/{product}', [App\Http\Controllers\ProductsController::class, 'update'])
 ->name('update');
 
+Route::get('/blog', [App\Http\Controllers\PostsController::class, 'index'])
+->name('index');
+Route::get('/blog/create', [App\Http\Controllers\PostsController::class, 'create'])
+->name('create');
+Route::post('/blog', [App\Http\Controllers\PostsController::class, 'store'])
+->name('store');
+Route::delete('/blog/{post}', [App\Http\Controllers\PostsController::class, 'destroy'])
+->name('destroy');
+Route::get('/blog/{post}/edit', [App\Http\Controllers\PostsController::class, 'edit'])
+->name('edit');
+Route::patch('/blog/{post}', [App\Http\Controllers\PostsController::class, 'update'])
+->name('update');
+
 
 Route::post('/showcase', [App\Http\Controllers\ShowcaseitemsController::class, 'store'])
 ->name('store');
@@ -46,6 +59,10 @@ Route::get('/text-edit/{filename}', [App\Http\Controllers\TextController::class,
 Route::get('/text-edit/{filename}/{text_part_index}', [App\Http\Controllers\TextController::class, 'edit'])->name('edit'); //->where('text_part_index', '[0-9]+');
 Route::post('/text-edit/{filename}/{text_part_index}', [App\Http\Controllers\TextController::class, 'update'])->name('update');
 
+
+Route::get('/reserve', [App\Http\Controllers\ReservesController::class, 'index'])->name('index');
+Route::post('/reserve', [App\Http\Controllers\ReservesController::class, 'store'])->name('store');
+Route::delete('/reserve/{reserve}', [App\Http\Controllers\ReservesController::class, 'destroy'])->name('destroy');
 
 
 

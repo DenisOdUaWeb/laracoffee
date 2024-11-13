@@ -9,7 +9,7 @@
                     <li class="nav-header__item"><a class="nav-header__link" href="{{url('/')}}">Home page</a>
                         <img src="/storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
-                    <li class="nav-header__item"><a class="nav-header__link" href="#reserve">Reserve</a>
+                    <li class="nav-header__item"><a class="nav-header__link" href="/#reserve">Reserve</a>
                         <img src="/storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
                     <li class="nav-header__item"><a class="nav-header__link" href="{{url('products')}}">Shop</a>
@@ -26,6 +26,10 @@
                     </li>
                     @can('viewAny',   \App\Models\Showcaseitem::class)
                     <li class="nav-header__item"><a class="nav-header__link" href="/text-edit"><button class="btn btn-warning">Text Editor</button></a>
+                    </li>
+                    @endcan
+                    @can('viewAny',   \App\Models\Showcaseitem::class)
+                    <li class="nav-header__item"><a class="nav-header__link" href="/reserve"><button class="btn btn-warning">Reservations</button></a>
                     </li>
                     @endcan
                 </ul>
