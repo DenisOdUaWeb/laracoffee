@@ -110,7 +110,7 @@
                                     "Another reason people just can't keep away from their local coffee shop is the quality of coffee that's on offer. "
                                 </div>
                                 <div class="phrase-carousel__author">
-                                    Henry Monro
+                                    Henry Monrooooooo
                                 </div>
                             </div>
                             <div class="phrase-carousel__item">

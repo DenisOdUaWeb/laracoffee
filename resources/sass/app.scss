@@ -550,6 +550,10 @@ body {
 	display: flex;
 	border-bottom: 1px solid #000;
 }
+.recent-posts-blog__wrapper{
+	display: block;
+	border-bottom: 1px solid #000;
+}
 .recent-posts__leftpart {
 	flex: 1 1 38%;
 	padding: calc(30px + (65 - 30) * ((100vw - 320px) / (1900 - 320)));
@@ -557,6 +561,18 @@ body {
 .recent-posts__title {
 	margin-bottom: calc(35% + (250 - 35) * ((100vw - 320px) / (1900 - 320)));
 	position: relative;
+	>span {
+		position: absolute;
+		top: 107%;
+		left: 28%;
+		padding: 11px 76px;
+		line-height: 0.9;
+	}
+}
+.recent-posts-blog__title {
+	margin-bottom: 80px;
+	position: relative;
+	margin-left: calc(20px + 100*(100vw - 320px) / 1900);
 	>span {
 		position: absolute;
 		top: 107%;

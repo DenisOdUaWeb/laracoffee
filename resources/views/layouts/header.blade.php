@@ -15,7 +15,7 @@
                     <li class="nav-header__item"><a class="nav-header__link" href="{{url('products')}}">Shop</a>
                         <img src="/storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
-                    <li class="nav-header__item"><a class="nav-header__link" href="#">Blog</a>
+                    <li class="nav-header__item"><a class="nav-header__link" href="/blog">Blog</a>
                         <img src="/storage/img/svg.qodef-svg--underline.png" alt="underline">
                     </li>
                     <li class="nav-header__item displayonless1024 d-none"><a class="nav-header__link" href="#">search</a>
