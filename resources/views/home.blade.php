@@ -325,6 +325,7 @@
 
                             <div class="reserve__item">
                                 <select name="date" id="">
+                                    <?php  ?>
                                     <option value="({{ date('Y-m-d');}}) Today">Today ({{ date('Y-m-d');}})</option>
                                     <option value="({{ date('Y-m-d', strtotime(' +1 day'));}}) Tomorrow">Tomorrow ({{ date('Y-m-d', strtotime(' +1 day'));}})</option>
                                     <option value="({{ date('Y-m-d', strtotime(' +2 day'));}}) After tomorrow">After tomorrow ({{ date('Y-m-d', strtotime(' +2 day'));}})</option>
@@ -332,9 +333,10 @@
                             </div>
                             <div class="reserve__item">
                             <select name="time" id="">
-                                    <option value="Breakfast"> Breakfast</option>
-                                    <option value="Lunch">Lunch</option>
-                                    <option value="Diner">Dinner</option>
+
+                                    <option <?php if(date('H')>7){echo 'disabled';} ?> value="Breakfast">Breakfast</option>
+                                    <option <?php if(date('H')>13){echo 'disabled';} ?> value="Lunch">Lunch</option>
+                                    <option <?php if(date('H')>17){echo 'disabled';} ?> value="Diner">Dinner</option>
                                 </select>
                             </div>
                             <div class="reserve__item reserve__item_btn black-btn">
@@ -436,7 +438,7 @@
                             Recent blog posts Explore <span class="ellipsed">now</span>
                         </div>
                         <div class="recent-posts__all_btn black-btn">
-                            <button type="button" class="black-btn__btn">read all news</button>
+                            <a href="/blog"><button type="button" class="black-btn__btn">read all news</button></a>
                         </div>
                     </div>
                     <div class="recent-posts__rightpart">
